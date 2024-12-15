@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 import streamlit as st
 
 #Langsmith tracking
-os.environ['LANGCHAIN_API_KEY'] = st.secrets('LANGCHAIN_API_KEY')
+os.environ['LANGCHAIN_API_KEY'] = st.secrets.get('LANGCHAIN_API_KEY')
 os.environ['LANGCHAIN_TRACING_V2'] = 'True'
 os.environ['LANGCHAIN_PROJECT'] = st.secrets.get('LANGCHAIN_PROJECT')
 
